@@ -1,0 +1,39 @@
+<div class="container">
+
+    <div class="row">
+    
+    <div class="col-md-6 offset-md-3">
+    
+    <div class="card my-4 border-0 shadow-sm">
+    
+    <div class="card-body"> <h3>Update Student</h3>
+        <!-- <form action="/submit" method="post"> -->
+            <!-- <form (ngSubmit)="submitForm($event)" > -->
+        <form  (ngSubmit)="updateStudent($event)">
+            <label for="student_name">Student Name:</label><br>
+            <input type="text" id="student_name" name="student_name"  class="form-control" placeholder="Enter Name"  required  name="studentname" [(ngModel)]="student.name"><br><br>
+    
+            <label for="date_of_birth">Date of Birth:</label><br>
+            <input type="date" id="date_of_birth" name="date_of_birth" class="form-control"  required name="dob" [(ngModel)]="student.dateOfBirth"><br><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" required name="email" [(ngModel)]="student.email"><br><br>
+    
+
+            <label for="profile">Profile:</label><br>
+            <input readonly type="profile" id="profile" name="profile" class="form-control" placeholder="Enter Profile" required  [(ngModel)]="student.profile.biodata"><br><br>
+
+            <!-- <input class="btn btn-primary" type="submit " value="Submit"> -->
+            <button class="btn btn-primary ms-3 btn-sm" type="submit">Update</button>
+        </form>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    <!-- {{studentt : json}} -->

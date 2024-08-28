@@ -1,0 +1,34 @@
+<!-- course-student-view.component.html -->
+<div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <label for="courseDropdown">Select Course:</label>
+        <select id="courseDropdown" (change)="onCourseChange($event)">
+          <option *ngFor="let course of courses" [value]="course.course_id">{{ course.title }}</option>
+        </select>
+  
+        <div *ngIf="selectedCourseId">
+          <h3>Students Enrolled in Selected Course</h3>
+          <ul>
+            <li *ngFor="let student of courseStudents">{{ student.name }}</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <label for="studentDropdown">Select Student:</label>
+        <select id="studentDropdown" (change)="onStudentChange($event)">
+          <option *ngFor="let student of students" [value]="student.student_id">{{ student.name }}</option>
+        </select>
+  
+        <div *ngIf="selectedStudentId">
+          <h3>Courses Enrolled by Selected Student</h3>
+          <ul>
+            <li *ngFor="let course of studentCourses">{{ course.title }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  

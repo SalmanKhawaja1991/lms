@@ -1,0 +1,40 @@
+
+
+  <div class="container">
+
+    <div class="row">
+    
+    <div class="col-md-10 offset-md-1">
+    
+    <div class="card border-0 shadow-sm my-4">
+    
+    <div class="card-body">
+        <form (ngSubmit)="submitForm($event)">
+            <div class="form-group">
+              <label for="date_of_enroll">Enrollment Date:</label>
+              <input type="date" id="date_of_enroll" name="date_of_enroll" class="form-control" required [(ngModel)]="enrollment.enrollmentDate">
+            </div>
+          
+            <div class="form-group">
+              <label for="course">Choose a Course:</label>
+              <select class="form-control" name="course" id="course" [(ngModel)]="enrollment.course">
+                <option *ngFor="let course of courses" [ngValue]="course">{{ course.title }}</option>
+              </select>
+            </div>
+          
+            <button type="submit" class="btn btn-primary mt-3">Enroll</button>
+          </form>
+
+
+  </div>
+  
+</div>
+    
+</div>
+
+</div>
+
+</div>
+
+
+

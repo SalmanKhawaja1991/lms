@@ -1,0 +1,60 @@
+<div class="container">
+
+    <div class="row">
+    
+    <div class="col-md-10 offset-md-1">
+    
+    <div class="card border-0 shadow-sm my-4">
+    
+    <div class="card-body">
+    
+    <h3>All Courses</h3>
+
+ 
+
+  <table style="margin-bottom: 50px;" class=" table table-responsive table-striped  border-dark">
+
+    <thead class="table-dark ">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>            
+            <th>Experties</th>
+            <th>Actions</th>
+        </tr>
+
+    </thead> 
+
+
+    <tbody>
+        <tr *ngFor = "let course of courses">
+            <td>{{course.course_id}}</td>
+            <td>{{course.title}}</td>
+            <td>{{course.description}}</td>
+            <td>
+                <button [routerLink]="['/update-course',course.course_id]" class = "btn  btn-secondary btn-sm"> Update</button> 
+                 <button (click) = "deleteCourse(course.course_id)" class = "btn btn-danger btn-sm" style="margin-left: 10px"> Delete</button> 
+                <!-- <button (click) = "detailsOfStudent(student.student_id)" class = "btn btn-success btn-sm " style="margin-left: 10px"> View</button> -->
+
+              </td>
+        </tr>
+        
+        <br>
+        <tr align="text-center">
+            <button [routerLink]="['/add-course']" class = "btn  btn-primary btn-sm " > Add New Course</button> 
+        </tr>
+
+    </tbody>
+
+
+</table>
+
+
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>

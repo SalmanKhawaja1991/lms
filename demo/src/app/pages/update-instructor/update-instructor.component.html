@@ -1,0 +1,31 @@
+<div class="container">
+
+    <div class="row">
+    
+    <div class="col-md-6 offset-md-3">
+    
+    <div class="card my-4 border-0 shadow-sm">
+    
+    <div class="card-body"> <h3>Update Instructor</h3>
+        <!-- <form action="/submit" method="post"> -->
+        <form (ngSubmit)="updateInstructor($event)" >
+            <label for="instructor_name">Instructor Name:</label><br>
+            <input type="text" id="instructor_name" name="instructor_name"  class="form-control" placeholder="Enter Name"  required   [(ngModel)]="instructor.name"><br><br>
+    
+          
+            <label for="expertie">Experties:</label><br>
+            <input type="expertie" id="expertie" name="expertie" class="form-control" placeholder="Enter Expertie" required [(ngModel)]="instructor.expertise"><br><br>
+    
+            <!-- <input class="btn btn-primary" type="submit " value="Submit"> -->
+            <button class="btn btn-primary ms-3 btn-sm" type="submit">Update</button>
+        </form>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>

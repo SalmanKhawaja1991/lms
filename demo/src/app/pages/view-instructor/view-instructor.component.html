@@ -1,0 +1,65 @@
+<div class="container">
+
+    <div class="row">
+    
+    <div class="col-md-10 offset-md-1">
+    
+    <div class="card border-0 shadow-sm my-4">
+    
+    <div class="card-body">
+    
+    <h3>All Instructors</h3>
+
+ 
+
+  <table style="margin-bottom: 50px;" class=" table table-responsive table-striped  border-dark">
+
+    <thead class="table-dark ">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>            
+            <th>Experties</th>
+            
+            <th>Assigned Courses</th>
+            <th>Actions</th>
+        </tr>
+
+    </thead> 
+
+
+
+    <tbody>
+        <tr *ngFor = "let instructor of instructors">
+            <td>{{instructor.instructor_id}}</td>
+            <td>{{instructor.name}}</td>
+            <td>{{instructor.expertise}}</td>
+            <td>{{ instructor.numberOfCourses || '0' }}</td>
+            <!-- <td>{{ student.numberOfCourses || 'Loading...' }}</td> -->
+            <td>
+                <button [routerLink]="['/update-instructor',instructor.instructor_id]" class = "btn  btn-secondary btn-sm"> Update</button>
+                <button (click) = "deleteInstructor(instructor.instructor_id)" class = "btn btn-danger btn-sm" style="margin-left: 10px"> Delete</button>
+                <!-- <button (click) = "detailsOfStudent(student.student_id)" class = "btn btn-success btn-sm " style="margin-left: 10px"> View</button> -->
+                <button [routerLink]="['/assign-instructor',instructor.instructor_id]" class = "btn  btn-secondary btn-sm" style="margin-left: 10px"> Assign Course</button>
+
+              </td>
+        </tr>
+        <br>
+        <tr align="text-center">
+            <button [routerLink]="['/add-instructor']" class = "btn  btn-primary btn-sm " > Add New Instructor</button> 
+        </tr>
+
+    </tbody>
+
+
+</table>
+
+
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>

@@ -1,0 +1,15 @@
+/* course-student-view.component.css */
+.container {
+    margin-top: 20px;
+  }
+  h3 {
+    margin-top: 20px;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 5px 0;
+  }
+  
